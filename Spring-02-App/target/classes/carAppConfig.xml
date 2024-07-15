@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- bean definitions here -->
+	<bean id="diesel" class="com.ashokit.carapp.DieselEngine" />
+	<bean id="petrol" class="com.ashokit.carapp.PetrolEngine"/>
+	<bean id="mycar" class="com.ashokit.carapp.Car">
+		<constructor-arg ref="diesel" />
+		<property name="engine" ref="petrol"/>
+	</bean>
+</beans>

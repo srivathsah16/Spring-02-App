@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- bean definitions here -->
+	<bean id="userService1" class="com.ashokit.userapp.UserService">
+		<property name="userDao" ref="daoImpl"></property>
+	</bean>
+	<bean id="daoImpl" class="com.ashokit.userapp.UserDAOImpl" />
+</beans>
